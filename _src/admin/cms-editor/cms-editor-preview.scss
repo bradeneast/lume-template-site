@@ -1,0 +1,19 @@
+@import "../../_includes/css/_config.scss";
+@import "../../_includes/css/_reset.scss";
+@import "../../_includes/css/typography.scss";
+
+
+body {
+  padding: 4rem;
+}
+
+p+p,
+div+div,
+p+div,
+div+p {
+  margin-top: 2rem
+}
+
+p {
+  max-width: 36rem;
+}

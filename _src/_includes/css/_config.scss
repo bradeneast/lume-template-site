@@ -1,0 +1,106 @@
+/* Colors */
+$g0: #121212;
+$g1: #232323;
+$g2: #474747;
+$g3: #797979;
+$g4: #a0a0a0;
+$g5: #dbdbdb;
+$g6: #e4e4e4;
+$g7: #f1f1f1;
+$g8: #ffffff;
+$primary: #40ffa9;
+$secondary: #a550ff;
+
+/* Effects */
+$transition: 0.6s cubic-bezier(.4, .1, .1, 1);
+$transition-long: 1s cubic-bezier(.6, 0, .1, 1);
+$transition-extra-long: 10s cubic-bezier(.1, 0.5, 0.4, 1);
+$shadow: 0 0 0.63em -0.12em lighten($primary, 20%);
+$border-width: 1px;
+$border: $border-width solid var(--g3);
+$border-radius: 2rem;
+
+/* Dimensions */
+$mobile: 45rem;
+$paragraph-width: 31rem;
+
+/* Fonts */
+$font-family-text: "Clash Grotesk", sans-serif;
+$font-family-display: "Clash Grotesk", sans-serif;
+
+$font-size-extra-large-desktop: calc(59px + 2vw);
+$font-size-large-desktop: calc(25px + 1.9vw);
+$font-size-medium-desktop: calc(17px + 1vw);
+$font-size-body-desktop: calc(15px + .4vw);
+$font-size-small-desktop: calc(11px + .2vw);
+$font-size-extra-large-mobile: calc(36px + 2vw);
+$font-size-large-mobile: calc(30px + 1.4vw);
+$font-size-body-mobile: 18px;
+$font-size-small-mobile: 11px;
+
+/* Custom Property Declarations */
+:root {
+  --font-size-extra-large: #{$font-size-extra-large-desktop};
+  --font-size-small: #{$font-size-small-desktop};
+  --font-size-body: #{$font-size-body-desktop};
+  --font-size-medium: #{$font-size-medium-desktop};
+  --font-size-large: #{$font-size-large-desktop};
+  /* Colors */
+  --g0: #{$g0};
+  --g1: #{$g1};
+  --g2: #{$g2};
+  --g3: #{$g3};
+  --g4: #{$g4};
+  --g5: #{$g5};
+  --g6: #{$g6};
+  --g7: #{$g7};
+  --g8: #{$g8};
+  --border-width: #{$border-width};
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+}
+
+@media screen and (max-width: $mobile) {
+  :root {
+    --font-size-extra-large: #{$font-size-extra-large-mobile};
+    --font-size-small: #{$font-size-small-mobile};
+    --font-size-regular: #{$font-size-body-mobile};
+  }
+}
+
+@media (prefers-color-scheme:dark) {
+  :root {
+    --g0: #{$g8};
+    --g1: #{$g7};
+    --g2: #{$g6};
+    --g3: #{$g5};
+    --g4: #{$g4};
+    --g5: #{$g3};
+    --g6: #{$g2};
+    --g7: #{$g1};
+    --g8: #{$g0};
+    --primary: #{$secondary};
+    --secondary: #{$primary};
+  }
+}
+
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("/_/fonts/ClashGrotesk-Regular.woff2") format("woff2"), url("/_/fonts/ClashGrotesk-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("/_/fonts/ClashGrotesk-Medium.woff2") format("woff2"), url("/_/fonts/ClashGrotesk-Medium.woff") format("woff");
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("/_/fonts/ClashGrotesk-Semibold.woff2") format("woff2"), url("/_/fonts/ClashGrotesk-Semibold.woff") format("woff");
+  font-display: swap;
+  font-weight: 600;
+}
